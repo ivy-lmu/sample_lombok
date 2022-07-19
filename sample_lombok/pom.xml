@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>sample.lombok</groupId>
+  <artifactId>sample-lombok</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>iar</packaging>
+      <properties>
+		<org.jacoco.version>0.7.5.201505241946</org.jacoco.version>
+		<org.powermock.version>2.0.9</org.powermock.version>
+		<version.maven.release.plugin>2.5.3</version.maven.release.plugin>
+		<reflections.version>0.9.10</reflections.version>
+		<libsass.version>0.2.10-libsass_3.5.3</libsass.version>
+		<maven.surefire.plugin>2.19.1</maven.surefire.plugin>
+		<ignoreTestFail>true</ignoreTestFail>
+		<egopix.version>2018.11.19</egopix.version>
+		<ivyVersion>9.3.1</ivyVersion>
+		<skipTests>false</skipTests> 
+	</properties>
+	<dependencies>
+	    <dependency>
+		  <groupId>org.projectlombok</groupId>
+		  <artifactId>lombok</artifactId>
+		  <version>1.18.18</version>
+		  <scope>provided</scope>
+		</dependency>
+    </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.axonivy.ivy.ci</groupId>
+        <artifactId>project-build-plugin</artifactId>
+        <version>9.3.1</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
