@@ -23,7 +23,6 @@
 		  <groupId>org.projectlombok</groupId>
 		  <artifactId>lombok</artifactId>
 		  <version>1.18.18</version>
-		  <scope>provided</scope>
 		</dependency>
     </dependencies>
   <build>
@@ -35,9 +34,9 @@
         <extensions>true</extensions>
         <configuration>
         	<compilerOptions>
- 					<!-- <compilerOption>-help</compilerOption>--> 
-	            <compilerOption>-XprintProcessorInfo</compilerOption>
-	        	<compilerOption>-XprintRounds</compilerOption>
+ 					<compilerOption>-proc:none</compilerOption>
+	            <!-- <compilerOption>-XprintProcessorInfo</compilerOption>
+	        	<compilerOption>-XprintRounds</compilerOption>--> 
 	        	<!-- Lombok annotationProcessing can't work with Eclipse JDT compiler 
 	        	https://github.com/projectlombok/lombok/blob/master/src/core/lombok/core/AnnotationProcessor.java#L199
 	        	-->
