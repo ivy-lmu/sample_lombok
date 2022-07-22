@@ -28,6 +28,16 @@
         <artifactId>project-build-plugin</artifactId>
         <version>9.3.1</version>
         <extensions>true</extensions>
+<configuration>
+        	<compilerOptions>
+ 					<compilerOption>-proc:none</compilerOption>
+	            <!-- <compilerOption>-XprintProcessorInfo</compilerOption>
+	        	<compilerOption>-XprintRounds</compilerOption>--> 
+	        	<!-- Lombok annotationProcessing can't work with Eclipse JDT compiler 
+	        	https://github.com/projectlombok/lombok/blob/master/src/core/lombok/core/AnnotationProcessor.java#L199
+	        	-->
+	        </compilerOptions>
+        </configuration>
       </plugin>
     </plugins>
   </build>
