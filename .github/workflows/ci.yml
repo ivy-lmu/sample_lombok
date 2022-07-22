@@ -17,7 +17,10 @@ jobs:
         java-version: 11
 
     - name: Build with Maven
-      run: mvn clean verify --batch-mode ${{ inputs.mvnArgs }} ${{ secrets.mvnArgs }}
+      run: |
+        curl https://repo1.maven.org/maven2/org/projectlombok/lombok/1.18.18/lombok-1.18.18.jar -o lombok.jar
+        export MAVEN_OPTS=-javaagent:lombok.jar
+        mvn clean verify --batch-mode ${{ inputs.mvnArgs }} ${{ secrets.mvnArgs }}
 
     - name: Publish Unit Test Results
       uses: EnricoMi/publish-unit-test-result-action@v1
